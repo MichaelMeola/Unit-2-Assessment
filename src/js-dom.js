@@ -8,7 +8,17 @@
 // update and say "Log out". If a user clicks on the button again, its text
 // should switch from "Log Out" to "Log In".
 
-/// TODO: replace this with your code
+const logInButton = document.querySelector("#auth")
+
+const change = () => {
+  if (logInButton.textContent === "Log in") {
+    logInButton.textContent = "Log out"
+  } else {
+    logInButton.textContent = "Log in"
+  }
+}
+
+logInButton.addEventListener("click", change)
 
 // Send an alert
 //
@@ -17,12 +27,20 @@
 // A user should be able to enter what they want the alert to say in the
 // text box. Then, they can submit the form to trigger the alert.
 
-/// TODO: replace this with your code
+const form = document.querySelector("#send-alert")
+
+form.addEventListener('submit', (event) => {
+
+  const messageInput = document.querySelector("#alert-message")
+  const message = messageInput.value
+
+  alert(message)
+})
 
 // Add an item
 //
 // This is a pretty silly feature -- when a user clicks on the
-// button (the one that says "Double-ulick to add an item"), a new list
+// button (the one that says "Double-click to add an item"), a new list
 // item should appear.
 //
 // In other words, whenever a user clicks on the button, just
@@ -34,7 +52,16 @@
 //     <li>Item</li>  <!-- This was added after double-clicking -->
 //   </ol>
 
-/// TODO: replace this with your code
+const button = document.querySelector("#item-adder")
+
+button.addEventListener('dblclick', (event) => {
+  const ol = document.querySelector("#list")
+  const li = document.createElement('li')
+  
+  li.textContent = "Item"
+  
+  ol.appendChild(li)
+})
 
 // Change colors
 //
@@ -45,7 +72,29 @@
 // Clicking on "Turn Stuff Red" should make text red and clicking on "Turn
 // Stuff Blue" should make text blue.
 
-/// TODO: replace this with your code
+const blueButton = document.querySelector("#blue")
+const redButton = document.querySelector("#red")
+const coloredWords = document.querySelectorAll(".changes-colors")
+
+blueButton.style.color = `blue`
+redButton.style.color = `red`
+
+blueButton.addEventListener("click", (event) => {
+  coloredWords.forEach(function(element) {
+    element.style.color = "blue";
+  })
+})
+
+redButton.addEventListener("click", (event) => {
+  coloredWords.forEach(function(element) {
+    element.style.color = "red"
+  })
+})
+
+  
+
+
+
 
 // Calculate factorial
 //
