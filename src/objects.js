@@ -93,13 +93,20 @@ function translateToPirateTalk(phrase) {}
 // Ex.:
 //   wordCount('hello world')
 //   => { hello: 1, world: 1 }
-function wordCount(str) {}
+function wordCount(str) {
+  const words = str.split(' ')
+  const wordCountObj = {}
 
+  words.forEach((word) => {
+    if (wordCountObj[word]) {
+      wordCountObj[word] += 1
+    } else {
+      wordCountObj[word] = 1
+    }
+  })
 
-
-
-
-
+  return wordCountObj
+}
 
 // Given an object representing a bug, return true if the given bug is
 // available in the given month.
