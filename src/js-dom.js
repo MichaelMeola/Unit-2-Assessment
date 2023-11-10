@@ -76,25 +76,21 @@ const blueButton = document.querySelector("#blue")
 const redButton = document.querySelector("#red")
 const coloredWords = document.querySelectorAll(".changes-colors")
 
-blueButton.style.color = `blue`
-redButton.style.color = `red`
+// felt like doing extra here :)
+blueButton.style.color = "blue"
+redButton.style.color = "red"
 
 blueButton.addEventListener("click", (event) => {
-  coloredWords.forEach(function(element) {
-    element.style.color = "blue";
+  coloredWords.forEach((element) => {
+    element.style.color = "blue"
   })
 })
 
 redButton.addEventListener("click", (event) => {
-  coloredWords.forEach(function(element) {
+  coloredWords.forEach((element) => {
     element.style.color = "red"
   })
 })
-
-  
-
-
-
 
 // Calculate factorial
 //
@@ -111,7 +107,16 @@ redButton.addEventListener("click", (event) => {
 //   - calls your function that calculates a factorial
 //   - puts the result of the function inside the "result" span
 
-/// TODO: replace this with your code
+
+
+
+
+
+
+
+
+
+
 
 // Validate a form
 //
