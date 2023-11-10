@@ -1,0 +1,21 @@
+body {
+    font-family: system-ui, sans-serif;
+    background: black;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+th, td {
+    padding: 5px;
+}
+
+table {
+    margin-top: 50px;
+}
+
+form {
+    line-height: 40px;
+}
